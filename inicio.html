@@ -5,17 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manual MAIS</title>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso del MAIS</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/icono.png">
-    
-    <!-- Tu CSS y otros enlaces -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uso del MAIS</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/images/icono.png">
+
+        <!-- Tu CSS y otros enlaces -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
     <style>
         :root {
             --primary: #4a90e2;
@@ -361,67 +362,68 @@
             text-align: center;
             /* Centra el texto dentro del botón */
         }
+
         .button-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-}
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-/* Botones normales */
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #4a90e2;
-    color: #fff;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-}
+        /* Botones normales */
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #4a90e2;
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
 
-.btn:hover {
-    background: #2f6fbd;
-}
+        .btn:hover {
+            background: #2f6fbd;
+        }
 
-/* Dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-.dropdown .btn {
-    cursor: pointer;
-}
+        .dropdown .btn {
+            cursor: pointer;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 220px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    z-index: 1;
-    margin-top: 5px;
-    overflow: hidden;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 220px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            z-index: 1;
+            margin-top: 5px;
+            overflow: hidden;
+        }
 
-.dropdown-content a {
-    color: #2d2d2d;
-    padding: 12px 15px;
-    text-decoration: none;
-    display: block;
-    transition: background 0.2s;
-}
+        .dropdown-content a {
+            color: #2d2d2d;
+            padding: 12px 15px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.2s;
+        }
 
-.dropdown-content a:hover {
-    background-color: #f1f7ff;
-}
+        .dropdown-content a:hover {
+            background-color: #f1f7ff;
+        }
 
-/* Mostrar dropdown al pasar mouse */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        /* Mostrar dropdown al pasar mouse */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -487,41 +489,53 @@
             <p>📞 Contacto para soporte: <strong>MAIS – 925 722 232</strong></p>
             <p>✉️ Correo electrónico: <strong>correo@mais.es</strong></p>
         </section>
-       <section>
-    <h2>🔗 Enlaces útiles</h2>
+        <section>
+            <h2>🔗 Enlaces útiles</h2>
 
-    <div class="button-section">
-        <a href="https://www.ibeas.es/" class="btn" target="_blank">🌐 Página oficial MAIS</a>
-        <a href="#" class="btn" target="_blank">🆘 Soporte técnico MAIS(no disponible)</a>
+            <div class="button-section">
+                <a href="https://www.ibeas.es/" class="btn" target="_blank">🌐 Página oficial MAIS</a>
+                <a href="#" class="btn" target="_blank">🆘 Soporte técnico MAIS(no disponible)</a>
 
-        <!-- Dropdown Tutoriales -->
-        <div class="dropdown">
-            <button class="btn">📬 🎓 Tutoriales y guías ⬇️</button>
-            <div class="dropdown-content">
-                <a href="https://www.youtube.com/@Inform%C3%A1ticaMAISSL" target="_blank">🌐 Youtube oficial MAIS</a>
-                <a href="tutoriales.html" target="_blank">🎓 Videotutoriales MAIS</a>
+                <!-- Dropdown Tutoriales -->
+                <div class="dropdown">
+                    <button class="btn">📬 🎓 Tutoriales y guías ⬇️</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.youtube.com/@Inform%C3%A1ticaMAISSL" target="_blank">🌐 Youtube oficial
+                            MAIS</a>
+                        <a href="tutoriales.html" target="_blank">🎓 Videotutoriales MAIS</a>
 
+                    </div>
+                </div>
+
+                <!-- Dropdown Descargas -->
+                <div class="dropdown">
+                    <button class="btn">📬 DESCARGAR PDFS ⬇️</button>
+                    <div class="dropdown-content">
+                        <a href="assets/images/MANUAL BASICO MAIS (CARLA).pdf" download>📘 Manual completo pdf</a>
+                        <a href="assets/images/APUNTES BASICOS MAIS SIN CARGA TACTIL.docx" download>📘 Manual corto
+                            word</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <section style="border: 2px solid #4CAF50; padding: 15px; border-radius: 10px; background-color: #f0f9f0;">
+            <h2>🎯 4. Cómo hacer un cierre (¡rumbo a 2026!)</h2>
+            <p>✨ Reflexión del año 2025 y apertura de nuevas metas para 2026 ✨</p>
+            <a href="https://www.youtube.com/@Inform%C3%A1ticaMAISSL" target="_blank"
+                style="display: inline-block; padding: 10px 15px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                🎥 Ver Cierre MAIS 2026
+            </a>
+        </section>
 
-        <!-- Dropdown Descargas -->
-        <div class="dropdown">
-            <button class="btn">📬 DESCARGAR PDFS ⬇️</button>
-            <div class="dropdown-content">
-                <a href="assets/images/MANUAL BASICO MAIS (CARLA).pdf" download>📘 Manual completo pdf</a>
-                <a href="assets/images/APUNTES BASICOS MAIS SIN CARGA TACTIL.docx" download>📘 Manual corto word</a>
-            </div>
-        </div>
-    </div>
-</section>
 
-            <h2>Estado del manual: en proceso.</h2>
+
+        <h2>Estado del manual: en proceso.</h2>
 
     </main>
 
     <footer>
         📘 Manual MAIS –
-         Versión Web 1.0 (en mantenimiento)
+        Versión Web 1.0 (en mantenimiento)
     </footer>
 
 </body>

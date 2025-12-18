@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Código o atajos */
+.shortcut {
+    background: #eef6fc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: inline-block;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+<h1>📘 1. Cómo entrar en nuestro MAIS</h1>
+
+<section class="card">
+    <p>El MAIS cuenta con una lista de usuarios. Normalmente existen <strong>dos tipos principales</strong>:</p>
+    <ul>
+        <li>👨‍💻 <strong>Programador</strong> (no accesible para un cliente estándar)</li>
+        <li>🛠️ <strong>Administrador</strong> (uso completo del sistema)</li>
+    </ul>
+    <img src="assets/images/usuarios.jpg" alt="Usuarios MAIS" class="img-small">
+    <div class="tip">👉 Si no tienes un usuario creado, contacta con el administrador del sistema para que te proporcione uno.</div>
+</section>
+
+<section class="card">
+<h2>⌨️ 1.1. Atajos de teclado rápidos</h2>
+<p>Existen <strong>tres atajos esenciales</strong> que agilizan el trabajo en el MAIS:</p>
+
+<h3>🔵 F2 – Ver listas desplegables</h3>
+<p>Si pulsas <span class="shortcut">F2</span> sobre una casilla (por ejemplo, <em>Clientes</em>), aparecerá una lista con todos los registros disponibles.</p>
+<p>👉 Abajo podrás pulsar <strong>Configurar</strong> para mostrar más campos de la lista.</p>
+<img src="assets/images/listas.png" alt="Usuarios MAIS" >
+
+<h3>🔵 “+” – Crear código automático</h3>
+<p>Al pulsar <span class="shortcut">+</span> en el teclado, el sistema genera automáticamente el <strong>siguiente código disponible</strong>, comenzando desde 0 y siguiendo de forma descendente.</p>
+
+<h3>🔵 Doble clic – Acceso directo</h3>
+<p>Con un <strong>doble clic</strong> sobre una casilla podrás acceder directamente a su ficha.</p>
+<p>Ejemplo: Si la casilla <em>Formas de agrupación</em> está vacía, puedes hacer doble clic para abrir todas las formas disponibles e incluso crear una nueva.</p>
+</section>
+</main>
+
+<footer>
+📘 Manual MAIS – Versión moderna Web
+</footer>
+
+</body>
+</html>
