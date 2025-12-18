@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Código o atajos */
+.shortcut {
+    background: #eef6fc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: inline-block;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+<section class="card">
+<h1>🧾 Botones de Control de Documentos y Facturas</h1>
+<p>Justo después del carrito encontrarás <strong>dos botones principales</strong>:</p>
+<ul>
+    <li>📄 <strong>Documentos (Albaranes)</strong></li>
+    <li>🧾 <strong>Facturas</strong></li>
+</ul>
+<img src="assets/images/controles.jpg" alt="Artículos MAIS" >
+<p>Estos apartados permiten <strong>consultar, filtrar y visualizar</strong> todos los documentos generados.</p>
+<div class="tip">EL PRIMERO ES DE DOCUMENTOS (ALBARANES) Y EL SEGUNDO DE FACTURAS.</div>
+
+<h3>🔍 ¿Qué se puede hacer aquí?</h3>
+<ul>
+    <li>Ver y filtrar <strong>documentos</strong> y <strong>facturas</strong> ya realizadas.</li>
+    <li>Haciendo <strong>clic derecho</strong> sobre un documento:
+        <ul>
+            <li>▶️ <strong>Ver factura</strong> o <strong>Ver documento</strong></li>
+            <li>🖨️ <strong>Ver con formato</strong>, eligiendo el tipo de formato de impresión</li>
+        </ul>
+    </li>
+</ul>
+<div class="tip">⚠️ Para visualizar documentos en estos apartados, <strong>primero es necesario</strong> haber creado una venta, compra o movimiento desde el <strong>carrito</strong>, y haberla <strong>facturado</strong>.</div>
+
+<h3>🧾 Cómo hacer una <em>Factura Rectificativa</em></h3>
+
+<h4>🗂️ Selección del albarán</h4>
+<ol>
+    <li>Entramos en el listado de <strong>Documentos (Albaranes)</strong>.</li>
+    <li>Filtramos por la <strong>serie correspondiente</strong> (ej.: <em>Ventas contado</em>, <em>Facturas simplificadas</em>, etc.).</li>
+    <li>Seleccionamos el <strong>albarán que queremos rectificar</strong>.</li>
+</ol>
+
+<h4>🔄 Generar el documento rectificativo</h4>
+<ul>
+    <li>Hacemos <strong>clic derecho</strong> sobre el albarán elegido.</li>
+    <li>Seleccionamos <strong>“Generar documento rectificativo”</strong>.</li>
+</ul>
+
+<h4>📝 Indicar el motivo</h4>
+<p>El sistema solicitará que introduzcas el <strong>motivo de la rectificación</strong>. Es obligatorio rellenarlo de forma clara y correcta (requisito legal).</p>
+
+<h4>🧾 Facturar el documento rectificativo</h4>
+<ul>
+    <li>El sistema generará un <strong>nuevo documento en color rojo</strong>.</li>
+    <li>Pulsamos <strong>Facturar</strong> para emitir la factura rectificativa.</li>
+    <li>Una vez facturada, aparecerá en su <strong>serie correspondiente</strong>.</li>
+</ul>
+
+<div class="tip">⚠️ Asegúrate de que el <strong>motivo de la rectificación</strong> esté correctamente descrito. Comprueba que estás trabajando en la <strong>serie correcta</strong> para evitar errores de trazabilidad. Una factura rectificativa siempre debe quedar <strong>vinculada al documento original</strong>.</div>
+
+<h3>💡 Tips importantes</h3>
+<ul>
+    <li>Revisa siempre el <strong>tipo de IVA</strong> al registrar artículos.</li>
+    <li>Para artículos de empresa, el descuento se aplica <strong>automáticamente</strong> (no modificar manualmente).</li>
+    <li>Mantén actualizado el <strong>stock</strong> desde los albaranes para garantizar que los listados reflejen datos reales.</li>
+</ul>
+</section>

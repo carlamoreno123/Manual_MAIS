@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/icono.png">
+    
+    <!-- Tu CSS y otros enlaces -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --primary-dark: #2f6fbd;
+            --accent: #1234f3;
+            --bg: #f3f6fb;
+            --text: #2d2d2d;
+            --radius: 18px;
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        /* Botón atrás */
+        .back-btn {
+            display: inline-block;
+            background: var(--primary);
+            padding: 12px 18px;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-bottom: 25px;
+            transition: background 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary);
+            color: #fff;
+            margin-top: 40px;
+            border-radius: var(--radius);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <a href="inicio.html" class="back-btn">⬅ Volver a inicio</a>
+
+        <h1>🌟Tutoriales básicos🌟</h1>
+
+        <section class="card">
+            <h2>Botón Inventario</h2>
+            <video controls preload="metadata">
+                <source src="assets/videos/download1765538708144.mp4" type="video/mp4" />
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+           
+        </section>
+
+        <section class="card">
+            <h2>Establecer impresora</h2>
+            <video controls preload="metadata">
+                <source src="assets/videos/download1765540041659.mp4" type="video/mp4" />
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </section>
+        
+        <section class="card">
+            <h2>Establecer un banco y forma de pago</h2>
+            <video controls preload="metadata">
+                <source src="assets/videos/download1765540898722.mp4" type="video/mp4" />
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <h3>El numero de cuenta e IBAN del banco son ficticios por lo tanto no lo cojera el MAIS automaticamente</h3>
+            <p>Para que el MAIS coja automaticamente el banco y la forma de pago al crear una factura, es necesario que el numero de cuenta e IBAN del banco sean reales.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 - Tutoriales
+    </footer>
+
+</body>
+
+</html>

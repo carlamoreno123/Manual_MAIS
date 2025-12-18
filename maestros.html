@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Código o atajos */
+.shortcut {
+    background: #eef6fc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: inline-block;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+    <h1>📚 Botón de Maestros</h1>
+    <section class="card">
+
+
+<img src="assets/images/maestros.jpg" alt="Botón de Maestros" >
+
+<p>Dentro de este apartado podremos acceder a:</p>
+<ul>
+    <li>👥 <strong>Clientes</strong></li>
+    <li>🧾 <strong>Proveedores</strong></li>
+    <li>🚚 <strong>Formas de envío</strong></li>
+    <li>🏦 <strong>Bancos propios</strong> <em>(Si no aparece ninguno, consultar con la empresa MAIS)</em></li>
+</ul>
+
+<p>Desde aquí también se pueden <strong>crear</strong> clientes, proveedores y otros elementos maestros.</p>
+
+<h3>📦 Cómo hacer un Inventario</h3>
+<img src="assets/images/inventario1.jpg" alt="Crear Inventario" >
+
+<p>La ruta para crear o ajustar inventarios es:</p>
+<div class="tip">👉 <strong>MAESTROS → ALMACÉN → N. INVENTARIOS</strong></div>
+<p>También es posible colocar un <strong>acceso directo</strong> en el panel general para ir más rápido.</p>
+
+<h3>🗂️ Acceso a Inventarios</h3>
+<p>Al entrar, veremos una ventana como esta:</p>
+<img src="assets/images/inventario2.jpg" alt="Ventana de Inventarios" >
+
+<h3>Campos principales:</h3>
+<ul>
+    <li><strong>Cod. Almacén:</strong> Por defecto será <strong>00001</strong> si trabajamos con un almacén general. <em>(Si existe más de un almacén, cada uno tendrá su propio código.)</em></li>
+    <li><strong>Inventario:</strong> Pulsamos <strong>F2</strong> para ver inventarios existentes y asignar el <strong>siguiente número automático</strong>.</li>
+    <li><strong>Descripción, Tipo y Dependiente:</strong> Rellenamos estos campos según corresponda.</li>
+</ul>
+
+<h3>📥 Añadir artículos al inventario</h3>
+<p>En <strong>Cod. Artículo</strong>:</p>
+<ol>
+    <li>Pulsamos <strong>F2</strong> para ver todos los artículos del MAIS.</li>
+    <li>Abajo veremos las <strong>unidades actuales en stock</strong>.</li>
+    <li>En la casilla <strong>Recuento</strong>, ponemos las unidades que queremos <strong>sumar</strong> al inventario (esto sirve para ajustar el stock real).</li>
+    <li>Pulsamos <strong>Añadir</strong>.</li>
+    <li>El sistema pedirá un <strong>precio medio de compra</strong>:
+        <ul>
+            <li>Normalmente aparecerá una ventana recomendando la <strong>tarifa de venta actual</strong>.</li>
+            <li>Debemos poner <strong>la misma tarifa</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>✔️ Finalizar el Inventario</h3>
+<p>Cuando hayamos introducido todas las líneas (todos los artículos):</p>
+<ul>
+    <li>Pulsamos <strong>Aceptar</strong></li>
+    <li>El sistema <strong>sumará</strong> las unidades indicadas al stock</li>
+</ul>
+<div class="tip">👉 Este proceso actualiza automáticamente el inventario real del almacén.</div>
+</section>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual MAIS</title>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso del MAIS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/icono.png">
+    
+    <!-- Tu CSS y otros enlaces -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --primary-dark: #2f6fbd;
+            --bg: #f3f6fb;
+            --text: #2d2d2d;
+            --radius: 18px;
+            --shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* HEADER MODERNO */
+        header {
+            position: relative;
+            background-color: #4a90e2;
+            padding: 120px 20px;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            backdrop-filter: blur(2px);
+        }
+
+
+        header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            font-weight: 700;
+            animation: fadeDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 12px;
+            opacity: 0.95;
+            animation: fadeUp 1.3s ease;
+        }
+
+        /* ANIMACIONES */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: fadeUp 0.7s ease;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.9rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CAJA PARA IMÁGENES */
+        .img-placeholder {
+            width: 100%;
+            height: 220px;
+            background: #e9eff7;
+            border: 2px dashed #b8c6dd;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6d7b9c;
+            font-weight: 600;
+            margin: 18px 0 25px;
+            font-size: 1.1rem;
+        }
+
+        details summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .button-section {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+        }
+
+        .button-section div {
+            background: #eef3fc;
+            padding: 14px;
+            border-radius: var(--radius);
+            text-align: center;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .button-section div:hover {
+            transform: translateY(-4px);
+            background: #dce8ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--primary);
+            color: #fff;
+            margin-top: 40px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #4a90e2, #2f6fbd);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn2 {
+            display: inline-block;
+            padding: 10px 500px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #4a90e2, #2f6fbd);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn2:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #2f6fbd, #4a90e2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Efecto “onda” al hacer clic */
+        .btn2::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .btn2:active::after {
+            width: 200px;
+            height: 200px;
+            transition: 0s;
+        }
+
+        .btn3 {
+            display: inline-block;
+            padding: 10px 430px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #4a90e2, #2f6fbd);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn3:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #2f6fbd, #4a90e2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Efecto “onda” al hacer clic */
+        .btn3::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .btn3:active::after {
+            width: 200px;
+            height: 200px;
+            transition: 0s;
+        }
+
+        /* Hover con efecto pulse y degradado invertido */
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #2f6fbd, #4a90e2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Efecto “onda” al hacer clic */
+        .btn::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .btn:active::after {
+            width: 200px;
+            height: 200px;
+            transition: 0s;
+        }
+
+        /* Botones de barra de tareas */
+        .button-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .btn-task {
+            flex: 1;
+            min-width: 120px;
+            background: linear-gradient(135deg, #4a90e2, #2f6fbd);
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-task:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: linear-gradient(135deg, #2f6fbd, #4a90e2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Imagen pequeña con efecto hover */
+        .img-small {
+            width: 100%;
+            max-width: 1600px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .img-small:hover {
+            transform: scale(1.03);
+        }
+
+        /* Tip destacado */
+        .tip {
+            background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+            border-left: 6px solid #0a63d6cc;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+        }
+
+        .button-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button-section .btn {
+            flex: 1 1 45%;
+            /* Cada botón ocupa aproximadamente la mitad del ancho */
+            text-align: center;
+            /* Centra el texto dentro del botón */
+        }
+        .button-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Botones normales */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #4a90e2;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2f6fbd;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .btn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    z-index: 1;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #2d2d2d;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f7ff;
+}
+
+/* Mostrar dropdown al pasar mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>📘 Manual MAIS</h1>
+        <p>Guía moderna, visual y optimizada del sistema MAIS</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>🖥️ 1. Cómo entrar en nuestro MAIS</h2>
+
+            <img src="assets/images/cabecera.jpg" alt="Inicio MAIS" class="img-small">
+            <div class="container">
+                <a href="uso.html" class="btn">Aprender</a>
+            </div>
+        </section>
+        <section class="card">
+            <h2>🏠 2. Inicio del MAIS</h2>
+            <img src="assets/images/panel.jpg" alt="Inicio MAIS" class="img-small">
+
+            <p>Al entrar al sistema verás una <strong>barra de tareas superior</strong>.</p>
+
+            <div class="tip">🧭 <strong>(EXPLICADO DE IZQUIERDA A DERECHA)</strong></div>
+
+            <p>En la barra de tareas encontrarás los siguientes botones principales:</p>
+
+            <div class="button-section">
+                <a href="clientes.html" class="btn">👥Clientes y Proveedores</a>
+                <a href="articulos.html" class="btn">📦 Artículos</a>
+                <a href="documentos.html" class="btn">🛒 Documentos</a>
+                <a href="controles.html" class="btn">🧾 Controles de documentos</a>
+                <a href="caja.html" class="btn">💰 Caja</a>
+            </div>
+        </section>
+
+
+
+        <section>
+            <h2>🔘 3.Botones de texto</h2>
+
+            <p>En varias secciones del MAIS encontrarás <strong>botones de texto</strong> para realizar acciones
+                específicas.</p>
+            <p>En la parte superior, justo encima de los iconos, tenemos varios botones de texto que ofrecen funciones
+                más avanzadas.</p>
+            <img src="assets/images/panel_texto.jpg" alt="Inicio MAIS" class="img-small">
+
+            <div class="button-section">
+                <a href="maestros.html" class="btn">📚 Maestros</a>
+                <a href="listados.html" class="btn">📊 Listados e Informes</a>
+                <a href="copiasSeguridad.html" class="btn">🛡️ Copias de Seguridad</a>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>👥 4.Contacto</h2>
+            <img src="assets/images/direccion.jpg" alt="Inicio MAIS" class="img-small">
+
+            <p>📞 Contacto para soporte: <strong>MAIS – 925 722 232</strong></p>
+            <p>✉️ Correo electrónico: <strong>correo@mais.es</strong></p>
+        </section>
+       <section>
+    <h2>🔗 Enlaces útiles</h2>
+
+    <div class="button-section">
+        <a href="https://www.ibeas.es/" class="btn" target="_blank">🌐 Página oficial MAIS</a>
+        <a href="#" class="btn" target="_blank">🆘 Soporte técnico MAIS(no disponible)</a>
+
+        <!-- Dropdown Tutoriales -->
+        <div class="dropdown">
+            <button class="btn">📬 🎓 Tutoriales y guías ⬇️</button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/@Inform%C3%A1ticaMAISSL" target="_blank">🌐 Youtube oficial MAIS</a>
+                <a href="tutoriales.html" target="_blank">🎓 Videotutoriales MAIS</a>
+
+            </div>
+        </div>
+
+        <!-- Dropdown Descargas -->
+        <div class="dropdown">
+            <button class="btn">📬 DESCARGAR PDFS ⬇️</button>
+            <div class="dropdown-content">
+                <a href="assets/images/MANUAL BASICO MAIS (CARLA).pdf" download>📘 Manual completo pdf</a>
+                <a href="assets/images/APUNTES BASICOS MAIS SIN CARGA TACTIL.docx" download>📘 Manual corto word</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <h2>Estado del manual: en proceso.</h2>
+
+    </main>
+
+    <footer>
+        📘 Manual MAIS –
+         Versión Web 1.0 (en mantenimiento)
+    </footer>
+
+</body>
+
+</html>

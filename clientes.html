@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS - Clientes y Proveedores</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Campos obligatorios y opcionales */
+.tip-obligatory {
+    border-left-color: #27ae60;
+    background: #e6f7ed;
+}
+
+.tip-optional {
+    border-left-color: #f1c40f;
+    background: #fff8e6;
+}
+</style>
+</head>
+<body>
+
+<main>
+
+
+<section class="card">
+    <h1> 👥 Clientes y Proveedores</h1>
+    <p>En el MAIS, los apartados de <strong>Clientes</strong> y <strong>Proveedores</strong> son muy similares y permiten gestionar todos los datos necesarios para su correcto funcionamiento.</p>
+
+    <h2>👥 Clientes</h2>
+    <p>Este apartado registra y gestiona <strong>todos los datos de tus clientes</strong>.</p>
+    <img src="assets/images/clientes.jpg" alt="Clientes MAIS" >
+    <p>No es obligatorio rellenar todos los campos, pero los siguientes son necesarios para que el MAIS funcione correctamente:</p>
+
+    <div class="tip tip-obligatory">
+        ✅ <strong>Campos obligatorios:</strong>
+        <ul>
+            <li>🆔 <strong>NIF</strong></li>
+            <li>🧾 <strong>Nombre</strong></li>
+            <li>📍 <strong>Local</strong></li>
+            <li>🏠 <strong>Dirección</strong></li>
+            <li>🔢 <strong>Código Postal</strong></li>
+            <li>🏙️ <strong>Localidad</strong></li>
+            <li>🗺️ <strong>Provincia</strong></li>
+            <li>🌍 <strong>País</strong></li>
+            <li>☎️ <strong>Contacto</strong></li>
+        </ul>
+    </div>
+
+    <div class="tip tip-optional">
+        ✏️ <strong>Campos opcionales:</strong>
+        Resto de campos que pueden rellenarse según necesidades o preferencias de cada usuario. No son obligatorios.
+    </div>
+
+    <h2>🧾 Proveedores</h2>
+    <p>La ventana de proveedores es muy similar a la de clientes, permitiendo gestionar la información de cada proveedor.</p>
+   
+    
+    <h3>🔢 Código de proveedores</h3>
+    <ul>
+        <li>Los <strong>códigos de clientes</strong> comienzan por <strong>43</strong>.</li>
+        <li>Los <strong>códigos de proveedores</strong> comienzan por <strong>40</strong>.</li>
+    </ul>
+
+    <h3>⚙️ Funciones</h3>
+    <p>Las funciones son prácticamente las mismas que en clientes. También se rellenan los datos necesarios para el registro y gestión.</p>
+
+    <h3>🖼️ Añadir imagen</h3>
+    <p>Es posible añadir una imagen del proveedor, lo que facilita su identificación visual en el listado completo.</p>
+</section>
+
+</main>
+
+<footer>
+📘 Manual MAIS – Versión moderna Web
+</footer>
+
+</body>
+</html>

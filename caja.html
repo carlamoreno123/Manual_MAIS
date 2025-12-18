@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 9%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Código o atajos */
+.shortcut {
+    background: #eef6fc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: inline-block;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+    <section class="card">
+<h1>💰 Botón de Caja</h1>
+
+<img src="assets/images/caja.jpg" alt="Botón de Caja" class="img-small">
+
+<p>Este botón permite realizar la <strong>caja diaria</strong>, es decir, el cierre económico del día.</p>
+
+<h3>🗃️ Seleccionar la caja principal</h3>
+<p>Al entrar:</p>
+<ul>
+    <li>Pulsamos <strong>F2</strong> en la casilla de <em>Caja</em> para ver todas las disponibles.</li>
+    <li>Seleccionamos la <strong>Caja Principal</strong> o la que corresponda.</li>
+</ul>
+
+<p>A continuación aparecerá una ventana como esta:</p>
+<img src="assets/images/panel_caja.jpg" alt="Ventana de Caja" >
+
+<h3>👤 Dependiente y conteo de efectivo</h3>
+<ol>
+    <li>Indicamos el <strong>dependiente</strong> que realiza el cierre.</li>
+    <li>Introducimos el importe que contamos físicamente en cada casilla de efectivo.</li>
+    <li>El MAIS comparará ese importe con el total teórico.</li>
+</ol>
+
+<div class="tip">✔️ En la casilla <strong>Cuadre</strong>, el resultado debe ser <strong>0</strong>. Esto significa que la caja cuadra correctamente.</div>
+
+<h3>✔️ Finalizar la caja</h3>
+<p>Cuando el cuadre sea correcto:</p>
+<ul>
+    <li>Pulsamos <strong>Aceptar</strong></li>
+    <li>La caja del día quedará <strong>finalizada y registrada</strong>.</li>
+</ul>
+</section>

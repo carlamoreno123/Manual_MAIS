@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso del MAIS</title>
+<style>
+:root {
+    --primary: #4a90e2;
+    --primary-dark: #2f6fbd;
+    --accent: #1234f3;
+    --bg: #f3f6fb;
+    --text: #2d2d2d;
+    --radius: 18px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+ul {
+    margin: 15px 0 15px 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Imagenes */
+.img-small {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+}
+
+/* Resaltar tips y notas */
+.tip {
+    background: linear-gradient(90deg, #fdfbfb, #f1f7ff);
+    border-left: 6px solid var(--accent);
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+/* Código o atajos */
+.shortcut {
+    background: #eef6fc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: inline-block;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<main>
+
+
+<section class="card">
+<h1>🛒  Botón de Documentos (El carrito)</h1>
+<p>En este apartado podremos <strong>crear documentos</strong>, como compras y ventas de artículos.</p>
+
+<h3>📑 Series disponibles</h3>
+<p>Por defecto, el MAIS incluye varias series de documentos. Las más utilizadas son:</p>
+<ul>
+    <li>📦 <strong>Albaranes de Ventas</strong></li>
+    <li>📥 <strong>Albaranes de Compras</strong></li>
+    <li>🧾 <strong>Facturas Simplificadas</strong></li>
+</ul>
+<p>👉 Si en la casilla de <em>Serie</em> pulsamos <span class="shortcut">F2</span>, podremos ver <strong>todas las series</strong> disponibles.</p>
+<img src="assets/images/documentos.jpg" alt="Series Documentos MAIS" >
+
+<h3>📤 Cómo hacer un Albarán de Venta</h3>
+<h4>1️⃣ Seleccionar la serie</h4>
+<p>En <strong>Nº de serie</strong>, elegimos <em>Albarán de Ventas</em>. El <strong>Nº de documento</strong> se asignará automáticamente con el <strong>siguiente número libre</strong> de forma descendente. Rellenaremos los datos necesarios:</p>
+<img src="assets/images/lineas.jpg" alt="Datos de Serie" >
+
+<h4>🧾 Datos de la cuenta</h4>
+<p>Es necesario completar los datos del cliente. La forma más rápida es pulsar <span class="shortcut">F2</span> en el campo <strong>Cuenta</strong>, esto <strong>rellena automáticamente</strong> todos los datos necesarios.</p>
+
+<h4>📋 Líneas del documento</h4>
+<img src="assets/images/finalizar_documento.jpg" alt="Líneas documento MAIS" >
+<p>Para añadir artículos:</p>
+<ul>
+    <li>Hacemos <strong>doble clic</strong> en la casilla del artículo</li>
+    <li>Pulsamos <span class="shortcut">F2</span> para ver todo el listado</li>
+    <li>Elegimos el artículo</li>
+    <li>Rellenamos los datos (cantidad, precio, descuento, etc.)</li>
+</ul>
+<p>En la parte inferior derecha aparecerá también el <strong>tipo de IVA aplicable</strong>. ➡️ Para finalizar una línea, pulsamos <strong>Intro</strong> hasta que la casilla quede en blanco y pase a la siguiente.</p>
+
+<h4>✅ Finalizar el documento</h4>
+<img src="assets/images/finalizar_documento.png" alt="Finalizar Documento" >
+<ul>
+    <li>💳 <strong>Forma de pago:</strong> seleccionamos una forma de pago.</li>
+    <li>💵 <strong>Importe recibido:</strong> en Efectivo o Tarjeta, introducimos lo que entrega el cliente. Ejemplo: si nos da <strong>550 €</strong>, el sistema calculará el cambio automáticamente.</li>
+</ul>
+
+<div class="tip">
+🚨 <strong>MUY IMPORTANTE:</strong> El documento <strong>NO estará facturado</strong> hasta que pulsemos uno de estos botones: <strong>Factura, Documento, Ticket, Fra. SMP</strong>. Esto determina qué tipo de documento se imprimirá o entregará al cliente.
+</div>
+
+<h4>📎 Asociar archivos</h4>
+<p>También podemos adjuntar archivos al documento, como:</p>
+<ul>
+    <li>Albaranes recibidos</li>
+    <li>Facturas</li>
+    <li>PDF adjuntos</li>
+    <li>Imágenes o justificantes</li>
+</ul>
+
+<h4>🔁 Otros tipos de documentos</h4>
+<p>El funcionamiento es similar en todas las series. Por ejemplo, si hacemos un <strong>Albarán de Compra</strong>, podremos:</p>
+<ul>
+    <li>Poner en <em>Referencia</em> el Nº del albarán del proveedor</li>
+    <li>Adjuntar el archivo que nos proporcionaron</li>
+    <li>Completar las líneas igual que en las ventas</li>
+</ul>
+
+<h3>🎉 ¡Venta realizada!</h3>
+<p>Una vez completado el proceso, la venta quedará registrada.</p>
+</section>
