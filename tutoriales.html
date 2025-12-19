@@ -90,6 +90,24 @@
             margin-top: 40px;
             border-radius: var(--radius);
         }
+        .aviso-ficticio {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
     </style>
 </head>
 
@@ -100,6 +118,20 @@
         <a href="inicio.html" class="back-btn">⬅ Volver a inicio</a>
 
         <h1>🌟Tutoriales básicos🌟</h1>
+        <section class="card">
+            <h2>Hacer una venta</h2>
+            <video controls preload="metadata">
+                 <source src="assets/videos/venta.webm" type="video/webm">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <p>En este video se muestra cómo realizar una venta utilizando el sistema MAIS, incluyendo la selección de productos, la aplicación de descuentos y la finalización de la transacción.</p>
+           <h3>Nota:</h3>
+           <p>Si no tienes productos cargados en el sistema, puedes agregar productos de prueba desde el panel, en el icono de articulos para seguir el tutorial sin problemas.</p>
+           <h3 class="aviso-ficticio">
+    ⚠️ Estos datos son ficticios, no son reales
+</h3>
+
+        </section>
 
         <section class="card">
             <h2>Botón Inventario</h2>
